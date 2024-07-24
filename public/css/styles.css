@@ -1,0 +1,236 @@
+/******* Change Box Model ***************/
+
+@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Reddit+Mono:wght@200..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --font-body: Arial, Helvetica, sans-serif;
+  --font-headline: "Reddit Mono", "Roboto", sans-serif;
+  /* colors */
+  --color-base: #000;
+  --color-one: #fff;
+  --color-two: #551a8b; 
+  --color-three: #02b0d2;
+  --color-four: #242332;
+
+  /* sizes */
+  --large-font: 1.2em;
+  --small-font: 0.8em;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+}
+
+body h2, body h3 {
+  font-family: var(--font-headline);
+  font-size: var(--large-font);
+}
+
+.back-img {
+  display: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 20px 0;
+}
+
+.siteName {
+  font-size: 42px;
+}
+
+#tools {
+  padding-top: 10px;
+  padding-right: 5px;
+}
+
+#tools a {
+  font-size: large;
+  color: var(--color-base);
+}
+
+#tools a:hover {
+  color: var(--color-three);
+}
+
+nav {
+  background-color: var(--color-four);
+  padding: 1px;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  color: var(--color-one);
+  padding-left: 0;
+}
+
+h1 {
+  padding-left: 5px;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+.hero {
+  color: var(--color-two);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  padding-bottom: 50px;
+}
+
+.hero-info {
+  width: fit-content;
+  display: grid;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.48);
+  grid-row: 1;
+  grid-column: 1;
+  position: absolute;
+}
+
+.hero-info p, .hero-info h3 {
+  margin: 5px;
+}
+
+.hero-button { 
+  background-color: var(--color-three);
+  color: var(--color-base);
+  margin: 5px;
+  padding: 5px;
+  max-width: fit-content;
+  justify-self: center;
+}
+
+.hero-button:hover {
+  background-color: var(--color-two);
+  color: var(--color-one);
+}
+
+#hero-img {
+  width: 95%;
+  grid-row: 1;
+  grid-column: 1;
+  padding-left: 100px;
+  margin-top: -10px;
+}
+
+
+.upgrades, .reviews {
+  padding-left: 5px;
+}
+
+.upgrades-cards {
+  padding-left: 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.upgrades-cards li {
+  padding-bottom: 10px;
+  justify-items: center;
+  color: var(--color-three);
+} 
+
+.upgrades-cards li img {
+  width: 130px;
+  height: 80px;
+  padding: 10px 30px;
+  background-color: var(--color-three);
+}
+
+.upgrades-cards li a {
+  text-decoration: underline;
+  color: var(--color-two);
+}
+
+.upgrades-cards li a:hover {
+  color: var(--color-three);
+}
+
+.flux {
+  grid-column: 1;
+  grid-row: 1;
+  display: grid;
+}
+
+.flame {
+  grid-column: 2;
+  grid-row: 1;
+  display: grid;
+}
+
+.bumper {
+  grid-column: 1;
+  grid-row: 2;
+  display: grid;
+}
+
+.hub {
+  grid-column: 2;
+  grid-row: 2;
+  display: grid;
+}
+
+.review-content li {
+  height: 30px;
+}
+
+footer p {
+  padding-left: 5px;
+  font-size: var(--small-font);
+}
+
+@media screen and (min-width: 500px) {
+
+  html {
+    background-image: url("/images/site/small_check.jpg")
+  }
+
+  body {
+    max-width: 720px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #fff;
+    border: #02b0d2 solid 4.5px;
+    border-radius: 1%;
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero {
+    padding-bottom: 25px;
+  }
+  
+  .upgrades {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .reviews {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .review-content li {
+    height: 45px;
+  }
+
+}
