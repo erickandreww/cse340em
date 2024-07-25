@@ -1,0 +1,35 @@
+<% if (title) { %>
+    <h1><%= title %></h1>
+    <% } else {
+    res.redirect('/')
+} %>
+
+<%- vehicleInfo %>
+
+<div id="vehicles-reviews">
+    <h3>Costumer Reviews</h3>
+    <% if (!reviewInfo) { %>
+        <p id="first-review">Be the first to write a review</p>
+    <% } else { %>
+        <%- reviewInfo  %>
+    <% } %>
+</div>
+
+<div id="div-vehicleforms">
+<% if (!locals.loggedin) { %>
+    <p>You must <a href="/account/login">login</a> to write a review</p>
+<% } else { %>
+    <h3>Add Your Own Review</h3>
+    <form id="reviews-form" action="/review/addReview" method="post">
+        <fieldset>
+            <label for="name">Screen Name:<input type="text" name="account_firstname" readonly 
+                <% if(locals.accountData.account_firstname) { %> value="<%= locals.accountData.account_firstname %>" <% } %>></label>
+            <label for="review">Review:<textarea id="w3review" name="review_text" rows="5" cols="40"
+                required <% if(locals.review_text) { %> value="<%= locals.review_text %>" <% } %>></textarea>
+            <input type="hidden" name="inv_id" 
+                <% if(locals.inv_id) { %> value="<%= locals.inv_id %>" <% } %>>
+            <input id="submit" type="submit" value="Submit Review">
+        </fieldset>
+    </form>
+<% } %>
+</div>

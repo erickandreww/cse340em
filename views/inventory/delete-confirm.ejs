@@ -1,0 +1,25 @@
+<% if (title) { %>
+    <h1><%= title %></h1>
+    <% } else {
+    res.redirect('/')
+} %>
+<form name="DeleteVehicle" class="inv-management" id="EditVehicle-form" action="/inv/delete" method="post">
+    <fieldset>
+        <label for="invMake">Make<input type="text" readonly 
+            <% if(locals.inv_make) { %> value="<%= locals.inv_make %>" <% } %>></label>
+
+        <label for="invModel">Model<input type="text" readonly 
+            <% if(locals.inv_model) { %> value="<%= locals.inv_model %>" <% } %>></label>
+
+        <label for="invPrice">Price<input type="number" readonly 
+            <% if(locals.inv_price) { %> value="<%= locals.inv_price %>" <% } %>></label>
+
+        <label for="invYear">Year<input type="number" readonly 
+            <% if(locals.inv_year) { %> value="<%= locals.inv_year %>" <% } %>></label>
+
+        <input type="hidden" name="inv_id" 
+            <% if(locals.inv_id) { %> value="<%= locals.inv_id %>" <% } %>>
+
+        <input id="submit" type="submit" value="Delete Item">
+    </fieldset>
+</form>

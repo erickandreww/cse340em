@@ -1,0 +1,16 @@
+<% if (title) { %>
+    <h1><%= title %></h1>
+    <% } else {
+    res.redirect('/')
+} %>
+<%- messages() %>
+<form id="loginForm" class="inv-management" name="login-account" action="/account/login" method="post">
+    <fieldset>
+        <label for="email">Email:<input type="email" name="account_email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" 
+            required value="<%= locals.account_email %>"></label>
+        <label for="password">Password:<input type="password" name="account_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{12,}" required></label>
+        <p><i>Password must be minimum of 12 chacaracters and include 1 capital letter and 1 number.</i></p>
+        <input id="submit" type="submit" value="Login">
+    </fieldset>
+    <p id="no-account">No account? <a href="/account/register">Sign-up</a></p>
+</form>

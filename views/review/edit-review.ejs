@@ -1,0 +1,27 @@
+<% if (title) { %>
+    <h1><%= title %></h1>
+    <% } else {
+    res.redirect('/')
+} %>
+<% if (errors) { %>
+    <ul class="notice">
+    <% errors.array().forEach(error => { %>
+        <% if (error.msg !== 'Invalid value') { %>
+            <li><%= error.msg %></li>
+    <%  }}) %>
+   </ul>
+<% } %>
+<form name="EditReview" class="inv-management" id="EditReview-form" action="/review/updateReview" method="post">
+    <fieldset>
+        <label for="">Review Date<input type="text" name="review_date" 
+            readonly <% if(locals.review_date) { %> value="<%= locals.review_date %>" <% } %>></label>
+
+        <label for="">Review Text<input type="text" name="review_text" required minlength="1"
+            <% if(locals.review_text) { %> value="<%= locals.review_text %>" <% } %>></label>
+
+        <input type="hidden" name="review_id" <% if(locals.review_id) { %> value="<%= locals.review_id %>" <% } %>>
+        <input type="hidden" name="title" <% if(locals.title) { %> value="<%= locals.title %>" <% } %>>
+
+        <input id="submit" type="submit" value="Update">
+    </fieldset>
+</form>

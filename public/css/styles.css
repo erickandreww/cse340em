@@ -40,21 +40,22 @@ body h2, body h3 {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 10px 0 20px 0;
+  padding: 10px 0px 10px 5px;
 }
 
 .siteName {
-  font-size: 42px;
+  font-size: 25px;
 }
 
 #tools {
-  padding-top: 10px;
-  padding-right: 5px;
+  padding-top: 7.5px;
 }
 
 #tools a {
-  font-size: large;
+  font-size: 10x;
   color: var(--color-base);
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #tools a:hover {
@@ -83,6 +84,10 @@ h1 {
 
 nav ul li {
   list-style-type: none;
+}
+
+nav a {
+  color: var(--color-one);
 }
 
 .hero {
@@ -190,9 +195,299 @@ nav ul li {
   height: 30px;
 }
 
+
+/* Inventory Grid */
+
+#inv-display {
+  list-style: none;
+  display: block;
+  justify-items: center;
+  align-content: center;
+  
+}
+
+#inv-display li {
+  margin: 25px;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 10px;
+  max-width: 250px;
+  /* background-color: var(--color-two); */
+}
+
+#inv-display li img {
+  width: 200px;
+  height: 125px;
+  margin-bottom: 10px;
+  margin: auto;
+}
+
+
+/* details page */
+
+.vehicle-main {
+  padding: 10px;
+}
+
+.vehicle-div-img {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+#vehicle-img {
+  max-width: 350px;
+  height: 250px;
+}
+
+#vehicle-description, #vehicle-miles {
+  padding: 10px;
+}
+
+#vehicle-price, #vehicle-color {
+  background-color: rgb(229, 238, 236);
+  padding: 10px;
+}
+
+#vehicles-reviews h3 {
+  padding-left: 5px;
+}
+
+#div-vehicleforms p {
+  padding-left: 5px;
+}
+
+#first-review {
+  background-color: yellow;
+  width: 30%;
+}
+
+#costumer-reviews li, #costumer-reviews p {
+  padding: 0;
+  margin: 0;
+}
+
+#costumer-reviews li {
+  padding-bottom: 15px;
+}
+
+#costumer-reviews hr {
+  position: relative;
+  left: 0%;
+  width: 80%;
+  padding: 0;
+  margin: 0;
+  height: 3px;
+  color: #000;
+  background-color: #000;
+}
+
+#reviews-form {
+  width:auto
+}
+
+
+#div-forms {
+  padding-left: 5px;
+}
+
+#reviews-form  label {
+  color: var(--color-base);
+  display: block;
+  margin-bottom: 10px;
+}
+
+#reviews-form input, #reviews-form textarea {
+  padding: 5px;
+  border: 1px solid var(--color-three);
+  margin-top: 1.5px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Vehicles Management */
+.management li {
+  list-style: none;
+}
+
+.management li a {
+  text-decoration: underline;
+}
+
+
+/* Account Management */
+#account-management {
+  padding-left: 5px;
+}
+
+#account-management p, #account-management a {
+  padding-left: 5px;
+}
+
+.ac-management-inv {
+  padding-left: 5px;
+}
+
+.ac-management-inv a {
+  padding-left: 5px;
+}
+
+#account-management-reviews h2 {
+  padding-left: 5px;
+  padding-top: 10px;
+}
+
+#account-management-reviews h2 {
+  padding-left: 5px;
+}
+
+#reviewList p, #reviewList a {
+  margin: 0;
+  padding: 0;
+}
+
+#reviewList li {
+  padding-bottom: 10px;
+}
+
+/* FORMS */
+
+/* Login Form */
+.inv-management {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 25px;
+  padding: 20px;
+  background-color: var(--color-three);
+  color: var(--color-base);
+  border: 2px solid var(--color-two);
+  border-radius: 10px;
+}
+
+.inv-management fieldset {
+  padding-top: 10px;
+}
+
+.inv-management label {
+  color: var(--color-base);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.inv-management input, .inv-management select, 
+.inv-management textarea {
+  width: calc(100% - 25px);
+  display: block;
+  padding: 5px;
+  border: 1px solid var(--color-three);
+  margin-top: 1.5px;
+  margin-bottom: 10px;
+}
+
+#no-account {
+  text-align: center;
+}
+
+#no-account a {
+  text-decoration: underline;
+}
+
+#submit {
+  display: flex;
+  position: relative;
+  /* position: ; */
+  padding: 5px 10px;
+  background-color: var(--color-two);
+  color: var(--color-one);
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+#submit:hover {
+  background-color: var(--color-one);
+  color: var(--color-four);
+}
+
+/* register */
+
+#register-title {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/* Edit account Form */
+
+#e-acc-form h2 , #e-pass-form h2 {
+  padding-left: 5px;
+}
+
+#editAccountBasic-form fieldset, #editAccountPassword-form fieldset {
+  border: none;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+#editAccountBasic-form label, #editAccountPassword-form label {
+  color: var(--color-base);
+  display: block;
+  margin-bottom: 5px;
+}
+
+#editAccountBasic-form input, #editAccountPassword-form input {
+  width: 350px;
+  padding: 5px;
+  border: 1px solid var(--color-three);
+  margin-top: 1.5px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+#editAccountBasic-form .accEdit-sub,
+#editAccountPassword-form .accEdit-sub {
+  width: 150px;
+}
+
+/* Inventory Form */
+
+#manage-inventory {
+  padding-top: 10px;
+  padding-left: 5px;
+}
+
+#manage-inventory p, #manage-inventory select {
+  padding-left: 5px;
+}
+
+#manage-inventory select {
+  width: 180px;
+  padding: 2.5px;
+  border: 1px solid var(--color-three);
+  margin-bottom: 10px;
+}
+
+#inventoryDisplay {
+  padding-top: 5px;
+}
+
+
+
+/* Footer */
+
+footer {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
 footer p {
   padding-left: 5px;
   font-size: var(--small-font);
+}
+
+footer a {
+  padding-left: 5px;
 }
 
 @media screen and (min-width: 500px) {
@@ -231,6 +526,79 @@ footer p {
 
   .review-content li {
     height: 45px;
+  }
+
+
+  /* inv display desktop */
+
+  #inv-display {
+    list-style: none;
+      padding: 0;
+      margin: 10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+  }
+
+  #inv-display li {
+    text-align: center;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 250px;
+  }
+
+
+  /* details page desktop */
+  
+  .vehicle-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .vehicle-div-img {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .vehicle-details {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  #reviews-form {
+    padding-left: 5px;
+    width: 99%;
+  }
+
+  #reviews-form textarea {
+    width: 80%;
+  }
+  
+  #reviewList li {
+    display: flex;
+  }
+
+  #reviewList li a {
+    padding-left: 5px;
+  }
+
+  .inv-management {
+    width: 50%;
+  }
+
+  .siteName {
+    font-size: 42px;
+  }
+  
+  #tools {
+    padding-top: 10px;
+  }
+  
+  #tools a {
+    font-size: large;
+    color: var(--color-base);
+    padding-left: 10px;
   }
 
 }

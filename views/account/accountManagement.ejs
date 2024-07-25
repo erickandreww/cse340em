@@ -1,0 +1,30 @@
+<% if (title) { %>
+    <h1><%= title %></h1>
+    <% } else {
+    res.redirect('/')
+} %>
+<%- messages() %>
+
+<div class="management-body">
+<div id="account-management">
+    <h2>Welcome <%= locals.accountData.account_firstname%></h2>
+    <p>You're logged in</p>
+    <a href="./update/<%= locals.accountData.account_id %>">Edit Account Information</a>
+</div>
+
+<div id="account-management-reviews">
+    <h2>My Reviews</h2>
+    <% if (!myReviews) { %>
+        <p id="no-reviews">No reviews found</p>
+    <% } else { %>
+        <%- myReviews  %>
+    <% } %>
+</div>
+
+<% if (accountData.account_type !== 'Client') { %>
+<div class="ac-management-inv">
+    <h3> Inventory Management</h3>
+    <a href="/inv/">Management Inventory</a>
+</div>
+<% } %>
+</div>

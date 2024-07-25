@@ -1,0 +1,18 @@
+<% if (title) { %>
+    <h1><%= title %></h1>
+    <% } else {
+    res.redirect('/')
+} %>
+<form name="DeleteReview" class="inv-management" id="DeleteReview-form" action="/review/eraseReview" method="post">
+    <fieldset>
+        <label for="">Review Date<input type="text" name="review_date" readonly 
+            <% if(locals.review_date) { %> value="<%= locals.review_date %>" <% } %>></label>
+
+        <label for="">Review Text<input type="text" name="review_text" readonly
+            <% if(locals.review_text) { %> value="<%= locals.review_text %>" <% } %>></label>
+
+        <input type="hidden" name="review_id" <% if(locals.review_id) { %> value="<%= locals.review_id %>" <% } %>>
+
+        <input id="submit" type="submit" value="Delete">
+    </fieldset>
+</form>
